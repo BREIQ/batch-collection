@@ -1,5 +1,3 @@
-Aquí tienes el script de SSH con la misma estructura robusta, los colores ANSI para que se vea mucho más profesional y en texto plano para evitar errores de copiado:
-
 @echo off
 setlocal enabledelayedexpansion
 
