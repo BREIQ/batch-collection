@@ -1,4 +1,4 @@
-Gemini dijo
+Aquí tienes el script de SSH con la misma estructura robusta, los colores ANSI para que se vea mucho más profesional y en texto plano para evitar errores de copiado:
 
 @echo off
 setlocal enabledelayedexpansion
@@ -29,23 +29,32 @@ set "T_CONN=Connecting to: "
 set "T_CONN2= on port "
 )
 
+:: --- ANSI COLORS ---
+for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do set "ESC=%%b"
+set "green=%ESC%[92m"
+set "yellow=%ESC%[93m"
+set "cyan=%ESC%[96m"
+set "red=%ESC%[91m"
+set "reset=%ESC%[0m"
+
 :: --- MAIN LOGIC ---
 title %T_TITLE%
 
 call :ssh_logic
 
 echo.
-echo ------------------------------------------
-echo %T_TERM%
+echo %cyan%------------------------------------------%reset%
+echo %yellow%%T_TERM%%reset%
 echo %T_WAIT%
-echo ------------------------------------------
+echo %cyan%------------------------------------------%reset%
 timeout /t 86400 /nobreak
 exit /b
 
 :ssh_logic
-echo ==========================================
+cls
+echo %cyan%==========================================%reset%
 echo %T_HEADER%
-echo ==========================================
+echo %cyan%==========================================%reset%
 echo.
 
 set /p "user=%T_PROMPT_USER%"
@@ -63,9 +72,9 @@ set "port=%%b"
 )
 
 echo.
-echo ------------------------------------------
-echo %T_CONN%!domain!%T_CONN2%!port!
-echo ------------------------------------------
+echo %cyan%------------------------------------------%reset%
+echo %green%%T_CONN%!domain!%T_CONN2%!port!%reset%
+echo %cyan%------------------------------------------%reset%
 echo.
 
 ssh !user!@!domain! -p !port!
