@@ -59,8 +59,3 @@ Este repositorio está organizado en dos categorías especializadas para mantene
 #### 🔹 `cachec.bat`
 * **Función:** Una herramienta potente de mantenimiento para recuperar espacio en disco.
 * **Por qué es mejor:** Limpia archivos temporales, datos de Prefetch, vacía la caché DNS y fuerza el vaciado de la Papelera de reciclaje mediante integración con PowerShell.
-
-### Setup Inicial
-```bash
-git clone [https://github.com/BREIQ/batch-collection.git](https://github.com/BREIQ/batch-collection.git)
-cd batch-collection
