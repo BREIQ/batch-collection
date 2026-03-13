@@ -59,11 +59,3 @@ This repository is organized into two specialized categories to keep your workfl
 #### 🔹 `cachec.bat`
 * **Function:** A maintenance powerhouse to recover disk space.
 * **Why it's better:** Wipes Temp files, Prefetch data, flushes the DNS cache, and force-empties the Recycle Bin using PowerShell integration.
-
----
-
-## 🚀 Installation & Usage
-
-### Setup
-```bash
-git clone [https://github.com/BREIQ/batch-collection.git](https://github.com/BREIQ/batch-collection.git)
